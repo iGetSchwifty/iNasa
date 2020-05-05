@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="NearEarthObject" representedClassName="NearEarthObject" syncable="YES" codeGenerationType="class">
+        <attribute name="estimated_max_meters" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="estimated_min_meters" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String">
+            <userInfo>
+                <entry key="key" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="is_potentially_hazardous" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="eventDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NEO_Date" inverseName="object" inverseEntity="NEO_Date"/>
+    </entity>
+    <entity name="NEO_Date" representedClassName="NEO_Date" syncable="YES" codeGenerationType="class">
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="object" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NearEarthObject" inverseName="eventDate" inverseEntity="NearEarthObject"/>
+    </entity>
+    <entity name="PictureOfTheDay" representedClassName="PictureOfTheDay" syncable="YES" codeGenerationType="class">
+        <attribute name="copyright" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="explanation" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="NearEarthObject" positionX="-36" positionY="36" width="128" height="118"/>
+        <element name="NEO_Date" positionX="-54" positionY="27" width="128" height="73"/>
+        <element name="PictureOfTheDay" positionX="-63" positionY="-18" width="128" height="118"/>
+    </elements>
+</model>

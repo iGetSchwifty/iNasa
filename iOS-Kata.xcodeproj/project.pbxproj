@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF32F46C2461D93D00FEF227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F46B2461D93D00FEF227 /* AppDelegate.swift */; };
+		CF32F46E2461D93D00FEF227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F46D2461D93D00FEF227 /* SceneDelegate.swift */; };
+		CF32F4712461D93D00FEF227 /* iOS_Kata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF32F46F2461D93D00FEF227 /* iOS_Kata.xcdatamodeld */; };
+		CF32F4732461D93D00FEF227 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4722461D93D00FEF227 /* AppView.swift */; };
+		CF32F4752461D93D00FEF227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF32F4742461D93D00FEF227 /* Assets.xcassets */; };
+		CF32F4782461D93D00FEF227 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF32F4772461D93D00FEF227 /* Preview Assets.xcassets */; };
+		CF32F47B2461D93D00FEF227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF32F4792461D93D00FEF227 /* LaunchScreen.storyboard */; };
+		CF32F4862461D93E00FEF227 /* iOS_KataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4852461D93E00FEF227 /* iOS_KataTests.swift */; };
+		CF32F4912461D93E00FEF227 /* iOS_KataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4902461D93E00FEF227 /* iOS_KataUITests.swift */; };
+		CF32F4A02461EA3E00FEF227 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F49F2461EA3E00FEF227 /* PersistentContainer.swift */; };
+		CF32F4A52461EE3100FEF227 /* NearEarthObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A42461EE3100FEF227 /* NearEarthObjects.swift */; };
+		CF32F4A72461EE5100FEF227 /* PicOfDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A62461EE5100FEF227 /* PicOfDayView.swift */; };
+		CF32F4A92461EEAF00FEF227 /* PicOfDayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A82461EEAF00FEF227 /* PicOfDayService.swift */; };
+		CF367B0B2461F3B100E86EE1 /* PicOfDayAPIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF367B0A2461F3B100E86EE1 /* PicOfDayAPIEntity.swift */; };
+		CF367B0D2461FE8100E86EE1 /* PicOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF32F4822461D93E00FEF227 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF32F4602461D93D00FEF227 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF32F4672461D93D00FEF227;
+			remoteInfo = "iOS-Kata";
+		};
+		CF32F48D2461D93E00FEF227 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF32F4602461D93D00FEF227 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF32F4672461D93D00FEF227;
+			remoteInfo = "iOS-Kata";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF32F4682461D93D00FEF227 /* iOS-Kata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Kata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF32F46B2461D93D00FEF227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF32F46D2461D93D00FEF227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF32F4702461D93D00FEF227 /* iOS_Kata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_Kata.xcdatamodel; sourceTree = "<group>"; };
+		CF32F4722461D93D00FEF227 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		CF32F4742461D93D00FEF227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF32F4772461D93D00FEF227 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF32F47A2461D93D00FEF227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF32F47C2461D93D00FEF227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF32F4812461D93E00FEF227 /* iOS-KataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-KataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF32F4852461D93E00FEF227 /* iOS_KataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_KataTests.swift; sourceTree = "<group>"; };
+		CF32F4872461D93E00FEF227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF32F48C2461D93E00FEF227 /* iOS-KataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-KataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF32F4902461D93E00FEF227 /* iOS_KataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_KataUITests.swift; sourceTree = "<group>"; };
+		CF32F4922461D93E00FEF227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF32F49F2461EA3E00FEF227 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		CF32F4A42461EE3100FEF227 /* NearEarthObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjects.swift; sourceTree = "<group>"; };
+		CF32F4A62461EE5100FEF227 /* PicOfDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayView.swift; sourceTree = "<group>"; };
+		CF32F4A82461EEAF00FEF227 /* PicOfDayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayService.swift; sourceTree = "<group>"; };
+		CF367B0A2461F3B100E86EE1 /* PicOfDayAPIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayAPIEntity.swift; sourceTree = "<group>"; };
+		CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF32F4652461D93D00FEF227 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF32F47E2461D93E00FEF227 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF32F4892461D93E00FEF227 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF32F45F2461D93D00FEF227 = {
+			isa = PBXGroup;
+			children = (
+				CF32F46A2461D93D00FEF227 /* iOS-Kata */,
+				CF32F4842461D93E00FEF227 /* iOS-KataTests */,
+				CF32F48F2461D93E00FEF227 /* iOS-KataUITests */,
+				CF32F4692461D93D00FEF227 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF32F4692461D93D00FEF227 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF32F4682461D93D00FEF227 /* iOS-Kata.app */,
+				CF32F4812461D93E00FEF227 /* iOS-KataTests.xctest */,
+				CF32F48C2461D93E00FEF227 /* iOS-KataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF32F46A2461D93D00FEF227 /* iOS-Kata */ = {
+			isa = PBXGroup;
+			children = (
+				CF32F4A12461EB2F00FEF227 /* Views */,
+				CF32F49E2461EA1500FEF227 /* CoreData */,
+				CF32F46B2461D93D00FEF227 /* AppDelegate.swift */,
+				CF32F46D2461D93D00FEF227 /* SceneDelegate.swift */,
+				CF32F4742461D93D00FEF227 /* Assets.xcassets */,
+				CF32F4792461D93D00FEF227 /* LaunchScreen.storyboard */,
+				CF32F47C2461D93D00FEF227 /* Info.plist */,
+				CF32F4762461D93D00FEF227 /* Preview Content */,
+			);
+			path = "iOS-Kata";
+			sourceTree = "<group>";
+		};
+		CF32F4762461D93D00FEF227 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CF32F4772461D93D00FEF227 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF32F4842461D93E00FEF227 /* iOS-KataTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF32F4852461D93E00FEF227 /* iOS_KataTests.swift */,
+				CF32F4872461D93E00FEF227 /* Info.plist */,
+			);
+			path = "iOS-KataTests";
+			sourceTree = "<group>";
+		};
+		CF32F48F2461D93E00FEF227 /* iOS-KataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF32F4902461D93E00FEF227 /* iOS_KataUITests.swift */,
+				CF32F4922461D93E00FEF227 /* Info.plist */,
+			);
+			path = "iOS-KataUITests";
+			sourceTree = "<group>";
+		};
+		CF32F49E2461EA1500FEF227 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CF32F46F2461D93D00FEF227 /* iOS_Kata.xcdatamodeld */,
+				CF32F49F2461EA3E00FEF227 /* PersistentContainer.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CF32F4A12461EB2F00FEF227 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF32F4A32461EE2300FEF227 /* NearEarthObjects */,
+				CF32F4A22461EE1E00FEF227 /* PicOfDay */,
+				CF32F4722461D93D00FEF227 /* AppView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF32F4A22461EE1E00FEF227 /* PicOfDay */ = {
+			isa = PBXGroup;
+			children = (
+				CF32F4A62461EE5100FEF227 /* PicOfDayView.swift */,
+				CF32F4A82461EEAF00FEF227 /* PicOfDayService.swift */,
+				CF367B0A2461F3B100E86EE1 /* PicOfDayAPIEntity.swift */,
+				CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */,
+			);
+			path = PicOfDay;
+			sourceTree = "<group>";
+		};
+		CF32F4A32461EE2300FEF227 /* NearEarthObjects */ = {
+			isa = PBXGroup;
+			children = (
+				CF32F4A42461EE3100FEF227 /* NearEarthObjects.swift */,
+			);
+			path = NearEarthObjects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF32F4672461D93D00FEF227 /* iOS-Kata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF32F4952461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-Kata" */;
+			buildPhases = (
+				CF32F4642461D93D00FEF227 /* Sources */,
+				CF32F4652461D93D00FEF227 /* Frameworks */,
+				CF32F4662461D93D00FEF227 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-Kata";
+			productName = "iOS-Kata";
+			productReference = CF32F4682461D93D00FEF227 /* iOS-Kata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF32F4802461D93E00FEF227 /* iOS-KataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF32F4982461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-KataTests" */;
+			buildPhases = (
+				CF32F47D2461D93E00FEF227 /* Sources */,
+				CF32F47E2461D93E00FEF227 /* Frameworks */,
+				CF32F47F2461D93E00FEF227 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF32F4832461D93E00FEF227 /* PBXTargetDependency */,
+			);
+			name = "iOS-KataTests";
+			productName = "iOS-KataTests";
+			productReference = CF32F4812461D93E00FEF227 /* iOS-KataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF32F48B2461D93E00FEF227 /* iOS-KataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF32F49B2461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-KataUITests" */;
+			buildPhases = (
+				CF32F4882461D93E00FEF227 /* Sources */,
+				CF32F4892461D93E00FEF227 /* Frameworks */,
+				CF32F48A2461D93E00FEF227 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF32F48E2461D93E00FEF227 /* PBXTargetDependency */,
+			);
+			name = "iOS-KataUITests";
+			productName = "iOS-KataUITests";
+			productReference = CF32F48C2461D93E00FEF227 /* iOS-KataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF32F4602461D93D00FEF227 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Tacenda;
+				TargetAttributes = {
+					CF32F4672461D93D00FEF227 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					CF32F4802461D93E00FEF227 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = CF32F4672461D93D00FEF227;
+					};
+					CF32F48B2461D93E00FEF227 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = CF32F4672461D93D00FEF227;
+					};
+				};
+			};
+			buildConfigurationList = CF32F4632461D93D00FEF227 /* Build configuration list for PBXProject "iOS-Kata" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF32F45F2461D93D00FEF227;
+			productRefGroup = CF32F4692461D93D00FEF227 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF32F4672461D93D00FEF227 /* iOS-Kata */,
+				CF32F4802461D93E00FEF227 /* iOS-KataTests */,
+				CF32F48B2461D93E00FEF227 /* iOS-KataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF32F4662461D93D00FEF227 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF32F47B2461D93D00FEF227 /* LaunchScreen.storyboard in Resources */,
+				CF32F4782461D93D00FEF227 /* Preview Assets.xcassets in Resources */,
+				CF32F4752461D93D00FEF227 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF32F47F2461D93E00FEF227 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF32F48A2461D93E00FEF227 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF32F4642461D93D00FEF227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF32F4A92461EEAF00FEF227 /* PicOfDayService.swift in Sources */,
+				CF32F46C2461D93D00FEF227 /* AppDelegate.swift in Sources */,
+				CF32F46E2461D93D00FEF227 /* SceneDelegate.swift in Sources */,
+				CF32F4A02461EA3E00FEF227 /* PersistentContainer.swift in Sources */,
+				CF32F4A52461EE3100FEF227 /* NearEarthObjects.swift in Sources */,
+				CF367B0D2461FE8100E86EE1 /* PicOfDayViewModel.swift in Sources */,
+				CF32F4732461D93D00FEF227 /* AppView.swift in Sources */,
+				CF32F4A72461EE5100FEF227 /* PicOfDayView.swift in Sources */,
+				CF367B0B2461F3B100E86EE1 /* PicOfDayAPIEntity.swift in Sources */,
+				CF32F4712461D93D00FEF227 /* iOS_Kata.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF32F47D2461D93E00FEF227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF32F4862461D93E00FEF227 /* iOS_KataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF32F4882461D93E00FEF227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF32F4912461D93E00FEF227 /* iOS_KataUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF32F4832461D93E00FEF227 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF32F4672461D93D00FEF227 /* iOS-Kata */;
+			targetProxy = CF32F4822461D93E00FEF227 /* PBXContainerItemProxy */;
+		};
+		CF32F48E2461D93E00FEF227 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF32F4672461D93D00FEF227 /* iOS-Kata */;
+			targetProxy = CF32F48D2461D93E00FEF227 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF32F4792461D93D00FEF227 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF32F47A2461D93D00FEF227 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF32F4932461D93E00FEF227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF32F4942461D93E00FEF227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF32F4962461D93E00FEF227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"iOS-Kata/Preview Content\"";
+				DEVELOPMENT_TEAM = KLMZS2FKJ3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "iOS-Kata/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tacenda.iOS-Kata";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF32F4972461D93E00FEF227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"iOS-Kata/Preview Content\"";
+				DEVELOPMENT_TEAM = KLMZS2FKJ3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "iOS-Kata/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tacenda.iOS-Kata";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF32F4992461D93E00FEF227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KLMZS2FKJ3;
+				INFOPLIST_FILE = "iOS-KataTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tacenda.iOS-KataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Kata.app/iOS-Kata";
+			};
+			name = Debug;
+		};
+		CF32F49A2461D93E00FEF227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KLMZS2FKJ3;
+				INFOPLIST_FILE = "iOS-KataTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tacenda.iOS-KataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Kata.app/iOS-Kata";
+			};
+			name = Release;
+		};
+		CF32F49C2461D93E00FEF227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KLMZS2FKJ3;
+				INFOPLIST_FILE = "iOS-KataUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tacenda.iOS-KataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS-Kata";
+			};
+			name = Debug;
+		};
+		CF32F49D2461D93E00FEF227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KLMZS2FKJ3;
+				INFOPLIST_FILE = "iOS-KataUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tacenda.iOS-KataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS-Kata";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF32F4632461D93D00FEF227 /* Build configuration list for PBXProject "iOS-Kata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF32F4932461D93E00FEF227 /* Debug */,
+				CF32F4942461D93E00FEF227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF32F4952461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-Kata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF32F4962461D93E00FEF227 /* Debug */,
+				CF32F4972461D93E00FEF227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF32F4982461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-KataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF32F4992461D93E00FEF227 /* Debug */,
+				CF32F49A2461D93E00FEF227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF32F49B2461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-KataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF32F49C2461D93E00FEF227 /* Debug */,
+				CF32F49D2461D93E00FEF227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF32F46F2461D93D00FEF227 /* iOS_Kata.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF32F4702461D93D00FEF227 /* iOS_Kata.xcdatamodel */,
+			);
+			currentVersion = CF32F4702461D93D00FEF227 /* iOS_Kata.xcdatamodel */;
+			path = iOS_Kata.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CF32F4602461D93D00FEF227 /* Project object */;
+}
