@@ -2,8 +2,8 @@
 //  ContentView.swift
 //  iOS-Kata
 //
-//  Created by Tacenda on 5/5/20.
-//  Copyright © 2020 Tacenda. All rights reserved.
+//  Created by Jeffrey Cripe on 5/5/20.
+//  Copyright © 2020 Jeffrey Cripe. All rights reserved.
 //
 
 import SwiftUI
@@ -16,7 +16,7 @@ struct TabBarView: View {
                 PicOfTheDayView()
             }.tabItem {
                 Image(systemName: "photo.fill")
-                Text("APOD")
+                Text("POD")
             }.tag(1)
             
             NearEarthObjects()

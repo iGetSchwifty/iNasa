@@ -1,15 +1,15 @@
 //
-//  iOS_KataTests.swift
-//  iOS-KataTests
+//  iNasaTests.swift
+//  iNasaTests
 //
-//  Created by Tacenda on 5/5/20.
-//  Copyright © 2020 Tacenda. All rights reserved.
+//  Created by Jeffrey Cripe on 5/5/20.
+//  Copyright © 2020 Jeffrey Cripe. All rights reserved.
 //
 
 import XCTest
-@testable import iOS_Kata
+@testable import iNasa
 
-class iOS_KataTests: XCTestCase {
+class iNasaTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
