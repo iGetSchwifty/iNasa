@@ -1,6 +1,6 @@
 //
 //  PicOfDay.swift
-//  iOS-Kata
+//  iNasa
 //
 //  Created by Jeffrey Cripe on 5/5/20.
 //  Copyright © 2020 Jeffrey Cripe. All rights reserved.

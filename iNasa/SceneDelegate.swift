@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  iOS-Kata
+//  iNasa
 //
 //  Created by Jeffrey Cripe on 5/5/20.
 //  Copyright © 2020 Jeffrey Cripe. All rights reserved.
@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let context = PersistentContainer.persistentContainer.viewContext
+        let context = PersistentContainer.viewContext
         let contentView = AppView().environment(\.managedObjectContext, context)
 
         // Use a UIHostingController as window root view controller.

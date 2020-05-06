@@ -1,6 +1,6 @@
 //
 //  PicOfDayService.swift
-//  iOS-Kata
+//  iNasa
 //
 //  Created by Jeffrey Cripe on 5/5/20.
 //  Copyright © 2020 Jeffrey Cripe. All rights reserved.
@@ -28,26 +28,7 @@ class PicOfDayService {
             .dataTaskPublisher(for: request)
             .map({ (data, response) -> String in
                 if let picOfDay = try? JSONDecoder().decode(PicOfDayAPIEntity.self, from: data) {
-                    let cachedURL = checkForCache(date: DateFormatter.picOfDayFormatter.date(from: picOfDay.date))
-                    guard cachedURL == nil else { return cachedURL ?? "" }
-                    
-                    let context = PersistentContainer.persistentContainer.newBackgroundContext()
-   
-                    context.performAndWait {
-                        let newPic = PictureOfTheDay(context: context)
-                        newPic.copyright = picOfDay.copyright
-                        newPic.date = DateFormatter.picOfDayFormatter.date(from: picOfDay.date) ?? Date()
-                        newPic.explanation = picOfDay.explanation
-                        newPic.title = picOfDay.title
-                        newPic.url = picOfDay.url
-                        do {
-                            try context.save()
-                        } catch let error {
-                            // TODO: If this was a real project we would do something meaningful with this error
-                            // for now we just print
-                            print(error)
-                        }
-                    }
+                    saveObject(picOfDay: picOfDay)
                     return picOfDay.url
                 }
                 return ""
@@ -71,10 +52,30 @@ class PicOfDayService {
             .eraseToAnyPublisher()
     }
     
+    private static func saveObject(picOfDay: PicOfDayAPIEntity) {
+        let context = PersistentContainer.newBackgroundContext()
+        
+        context.performAndWait {
+            let newPic = PictureOfTheDay(context: context)
+            newPic.copyright = picOfDay.copyright
+            newPic.date = DateFormatter.iNasaFormatter.date(from: picOfDay.date) ?? Date()
+            newPic.explanation = picOfDay.explanation
+            newPic.title = picOfDay.title
+            newPic.url = picOfDay.url
+            do {
+                try context.save()
+            } catch let error {
+                // TODO: If this was a real project we would do something meaningful with this error
+                // for now we just print
+                print(error)
+            }
+        }
+    }
+    
     private static func checkForCache(date: Date?) -> String? {
         guard let date = date else { return nil }
         
-        let context = PersistentContainer.persistentContainer.newBackgroundContext()
+        let context = PersistentContainer.newBackgroundContext()
         var returnVal: String?
         context.performAndWait {
             let fetchReq: NSFetchRequest<PictureOfTheDay> = PictureOfTheDay.fetchRequest()

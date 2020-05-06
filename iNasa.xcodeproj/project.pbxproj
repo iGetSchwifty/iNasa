@@ -17,13 +17,16 @@
 		CF32F4862461D93E00FEF227 /* iNasaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4852461D93E00FEF227 /* iNasaTests.swift */; };
 		CF32F4912461D93E00FEF227 /* iNasaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4902461D93E00FEF227 /* iNasaUITests.swift */; };
 		CF32F4A02461EA3E00FEF227 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F49F2461EA3E00FEF227 /* PersistentContainer.swift */; };
-		CF32F4A52461EE3100FEF227 /* NearEarthObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A42461EE3100FEF227 /* NearEarthObjects.swift */; };
+		CF32F4A52461EE3100FEF227 /* NearEarthObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A42461EE3100FEF227 /* NearEarthObjectsView.swift */; };
 		CF32F4A72461EE5100FEF227 /* PicOfTheDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A62461EE5100FEF227 /* PicOfTheDayView.swift */; };
 		CF32F4A92461EEAF00FEF227 /* PicOfDayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A82461EEAF00FEF227 /* PicOfDayService.swift */; };
 		CF367B0B2461F3B100E86EE1 /* PicOfDayAPIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF367B0A2461F3B100E86EE1 /* PicOfDayAPIEntity.swift */; };
 		CF367B0D2461FE8100E86EE1 /* PicOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */; };
 		CF42A5112462449100B39F99 /* DateFormatter+iNasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42A5102462449100B39F99 /* DateFormatter+iNasa.swift */; };
 		CF42A51324624C7200B39F99 /* PicOfTheDayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42A51224624C7200B39F99 /* PicOfTheDayDetailView.swift */; };
+		CF8505DF24625DCB009BB298 /* NearEarthObjectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8505DE24625DCB009BB298 /* NearEarthObjectsService.swift */; };
+		CF8505E12462627D009BB298 /* NEOAPIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8505E02462627D009BB298 /* NEOAPIEntity.swift */; };
+		CF8505E324626518009BB298 /* NearEarthObjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8505E224626518009BB298 /* NearEarthObjectsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +63,16 @@
 		CF32F4902461D93E00FEF227 /* iNasaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iNasaUITests.swift; sourceTree = "<group>"; };
 		CF32F4922461D93E00FEF227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF32F49F2461EA3E00FEF227 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
-		CF32F4A42461EE3100FEF227 /* NearEarthObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjects.swift; sourceTree = "<group>"; };
+		CF32F4A42461EE3100FEF227 /* NearEarthObjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjectsView.swift; sourceTree = "<group>"; };
 		CF32F4A62461EE5100FEF227 /* PicOfTheDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDayView.swift; sourceTree = "<group>"; };
 		CF32F4A82461EEAF00FEF227 /* PicOfDayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayService.swift; sourceTree = "<group>"; };
 		CF367B0A2461F3B100E86EE1 /* PicOfDayAPIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayAPIEntity.swift; sourceTree = "<group>"; };
 		CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayViewModel.swift; sourceTree = "<group>"; };
 		CF42A5102462449100B39F99 /* DateFormatter+iNasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+iNasa.swift"; sourceTree = "<group>"; };
 		CF42A51224624C7200B39F99 /* PicOfTheDayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDayDetailView.swift; sourceTree = "<group>"; };
+		CF8505DE24625DCB009BB298 /* NearEarthObjectsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjectsService.swift; sourceTree = "<group>"; };
+		CF8505E02462627D009BB298 /* NEOAPIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEOAPIEntity.swift; sourceTree = "<group>"; };
+		CF8505E224626518009BB298 /* NearEarthObjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjectsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +196,10 @@
 		CF32F4A32461EE2300FEF227 /* NearEarthObjects */ = {
 			isa = PBXGroup;
 			children = (
-				CF32F4A42461EE3100FEF227 /* NearEarthObjects.swift */,
+				CF32F4A42461EE3100FEF227 /* NearEarthObjectsView.swift */,
+				CF8505DE24625DCB009BB298 /* NearEarthObjectsService.swift */,
+				CF8505E02462627D009BB298 /* NEOAPIEntity.swift */,
+				CF8505E224626518009BB298 /* NearEarthObjectsViewModel.swift */,
 			);
 			path = NearEarthObjects;
 			sourceTree = "<group>";
@@ -334,17 +343,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8505E12462627D009BB298 /* NEOAPIEntity.swift in Sources */,
 				CF42A51324624C7200B39F99 /* PicOfTheDayDetailView.swift in Sources */,
 				CF32F4A92461EEAF00FEF227 /* PicOfDayService.swift in Sources */,
 				CF32F46C2461D93D00FEF227 /* AppDelegate.swift in Sources */,
 				CF32F46E2461D93D00FEF227 /* SceneDelegate.swift in Sources */,
 				CF42A5112462449100B39F99 /* DateFormatter+iNasa.swift in Sources */,
 				CF32F4A02461EA3E00FEF227 /* PersistentContainer.swift in Sources */,
-				CF32F4A52461EE3100FEF227 /* NearEarthObjects.swift in Sources */,
+				CF32F4A52461EE3100FEF227 /* NearEarthObjectsView.swift in Sources */,
 				CF367B0D2461FE8100E86EE1 /* PicOfDayViewModel.swift in Sources */,
 				CF32F4732461D93D00FEF227 /* AppView.swift in Sources */,
 				CF32F4A72461EE5100FEF227 /* PicOfTheDayView.swift in Sources */,
 				CF367B0B2461F3B100E86EE1 /* PicOfDayAPIEntity.swift in Sources */,
+				CF8505E324626518009BB298 /* NearEarthObjectsViewModel.swift in Sources */,
+				CF8505DF24625DCB009BB298 /* NearEarthObjectsService.swift in Sources */,
 				CF32F4712461D93D00FEF227 /* iOS_Kata.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,7 +565,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLMZS2FKJ3;
-				INFOPLIST_FILE = "iOS-KataTests/Info.plist";
+				INFOPLIST_FILE = iNasaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,7 +587,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLMZS2FKJ3;
-				INFOPLIST_FILE = "iOS-KataTests/Info.plist";
+				INFOPLIST_FILE = iNasaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -596,7 +608,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLMZS2FKJ3;
-				INFOPLIST_FILE = "iOS-KataUITests/Info.plist";
+				INFOPLIST_FILE = iNasaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -616,7 +628,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLMZS2FKJ3;
-				INFOPLIST_FILE = "iOS-KataUITests/Info.plist";
+				INFOPLIST_FILE = iNasaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

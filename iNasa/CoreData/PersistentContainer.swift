@@ -1,6 +1,6 @@
 //
 //  PersistentContainer.swift
-//  iOS-Kata
+//  iNasa
 //
 //  Created by Jeffrey Cripe on 5/5/20.
 //  Copyright © 2020 Jeffrey Cripe. All rights reserved.
@@ -9,9 +9,7 @@
 import CoreData
 
 class PersistentContainer {
-    // MARK: - Core Data stack
-
-    static var persistentContainer: NSPersistentContainer = {
+    private static var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "iOS_Kata")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -33,4 +31,13 @@ class PersistentContainer {
         container.viewContext.automaticallyMergesChangesFromParent = true
         return container
     }()
+    
+    static let viewContext = persistentContainer.viewContext
+
+    static func newBackgroundContext() -> NSManagedObjectContext {
+        let context = persistentContainer.newBackgroundContext()
+        //context.automaticallyMergesChangesFromParent = true
+        //context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        return context
+    }
 }

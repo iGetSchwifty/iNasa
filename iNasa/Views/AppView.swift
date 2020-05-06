@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  iOS-Kata
+//  iNasa
 //
 //  Created by Jeffrey Cripe on 5/5/20.
 //  Copyright © 2020 Jeffrey Cripe. All rights reserved.
@@ -19,7 +19,7 @@ struct TabBarView: View {
                 Text("POD")
             }.tag(1)
             
-            NearEarthObjects()
+            NearEarthObjectsView()
             .tabItem {
                 Image(systemName: "circle")
                 Text("Near Earth Objects")

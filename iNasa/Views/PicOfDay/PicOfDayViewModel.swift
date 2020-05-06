@@ -1,6 +1,6 @@
 //
 //  PicOfDayViewModel.swift
-//  iOS-Kata
+//  iNasa
 //
 //  Created by Jeffrey Cripe on 5/5/20.
 //  Copyright © 2020 Jeffrey Cripe. All rights reserved.
@@ -32,7 +32,7 @@ class PicOfDayViewModel: ObservableObject {
     
     func textFrom(date: Date?) -> String {
         if let date = date {
-            return DateFormatter.picOfDayFormatter.string(from: date)
+            return DateFormatter.iNasaFormatter.string(from: date)
         }
         return ""
     }

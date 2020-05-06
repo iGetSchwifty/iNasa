@@ -12,8 +12,8 @@
         <relationship name="eventDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NEO_Date" inverseName="object" inverseEntity="NEO_Date"/>
     </entity>
     <entity name="NEO_Date" representedClassName="NEO_Date" syncable="YES" codeGenerationType="class">
-        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="object" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NearEarthObject" inverseName="eventDate" inverseEntity="NearEarthObject"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
+        <relationship name="object" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NearEarthObject" inverseName="eventDate" inverseEntity="NearEarthObject"/>
     </entity>
     <entity name="PictureOfTheDay" representedClassName="PictureOfTheDay" syncable="YES" codeGenerationType="class">
         <attribute name="copyright" optional="YES" attributeType="String"/>
