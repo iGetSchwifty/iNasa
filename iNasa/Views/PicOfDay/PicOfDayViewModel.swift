@@ -32,7 +32,7 @@ class PicOfDayViewModel: ObservableObject {
     
     func textFrom(date: Date?) -> String {
         if let date = date {
-            return DateFormatter.iNasaFormatter.string(from: date)
+            return DateFormatter.string(from: date)
         }
         return ""
     }

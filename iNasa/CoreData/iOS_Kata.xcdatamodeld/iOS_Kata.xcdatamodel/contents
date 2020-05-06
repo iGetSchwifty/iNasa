@@ -9,11 +9,12 @@
             </userInfo>
         </attribute>
         <attribute name="is_potentially_hazardous" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="eventDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NEO_Date" inverseName="object" inverseEntity="NEO_Date"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="eventDate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NEO_Date" inverseName="neoObjects" inverseEntity="NEO_Date"/>
     </entity>
     <entity name="NEO_Date" representedClassName="NEO_Date" syncable="YES" codeGenerationType="class">
         <attribute name="time" optional="YES" attributeType="String"/>
-        <relationship name="object" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NearEarthObject" inverseName="eventDate" inverseEntity="NearEarthObject"/>
+        <relationship name="neoObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NearEarthObject" inverseName="eventDate" inverseEntity="NearEarthObject"/>
     </entity>
     <entity name="PictureOfTheDay" representedClassName="PictureOfTheDay" syncable="YES" codeGenerationType="class">
         <attribute name="copyright" optional="YES" attributeType="String"/>
@@ -23,7 +24,7 @@
         <attribute name="url" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="NearEarthObject" positionX="-36" positionY="36" width="128" height="118"/>
+        <element name="NearEarthObject" positionX="-36" positionY="36" width="128" height="133"/>
         <element name="NEO_Date" positionX="-54" positionY="27" width="128" height="73"/>
         <element name="PictureOfTheDay" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>

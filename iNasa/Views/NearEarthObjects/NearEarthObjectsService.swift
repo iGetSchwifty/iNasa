@@ -26,6 +26,7 @@ class NearEarthObjectsService {
             .dataTaskPublisher(for: request)
             .map({ (data, response) -> [NEOAPIEntity] in
                 var returnObjects = [NEOAPIEntity]()
+                // Need to parse as dict due to the fact that the api returns the date as a key value.
                 let neoData = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as AnyObject
                 if let nearEarthObjects = neoData?["near_earth_objects"] as? [String : AnyObject] {
                     for (_, objs) in nearEarthObjects {
@@ -73,11 +74,12 @@ class NearEarthObjectsService {
             entities.forEach { entity in
                 let nearEarthObject = NearEarthObject(context: context)
                 nearEarthObject.eventDate = neoDate
+                nearEarthObject.name = entity.name
                 nearEarthObject.estimated_max_meters = entity.estimatedDiameter.meters.max
                 nearEarthObject.estimated_min_meters = entity.estimatedDiameter.meters.min
                 nearEarthObject.id = entity.id
                 nearEarthObject.is_potentially_hazardous = entity.isPotentiallyHazardous
-                neoDate.addToObject(nearEarthObject)
+                neoDate.addToNeoObjects(nearEarthObject)
             }
             do {
                 try context.save()

@@ -27,9 +27,14 @@ class PicOfDayService {
         return URLSession.shared
             .dataTaskPublisher(for: request)
             .map({ (data, response) -> String in
-                if let picOfDay = try? JSONDecoder().decode(PicOfDayAPIEntity.self, from: data) {
+                do {
+                    let picOfDay = try JSONDecoder().decode(PicOfDayAPIEntity.self, from: data)
                     saveObject(picOfDay: picOfDay)
                     return picOfDay.url
+                } catch let error {
+                    // TODO: If this was a real project we would do something meaningful with this error
+                    // for now we just print
+                    print(error)
                 }
                 return ""
             })
@@ -83,11 +88,8 @@ class PicOfDayService {
             
             do {
                 let foundObjects = try context.fetch(fetchReq)
-                for object in foundObjects {
-                    if let oldDate = object.date, oldDate <= date {
-                        returnVal = object.url
-                        break
-                    }
+                if DateFormatter.string(from: foundObjects.first?.date ?? Date()) == DateFormatter.string(from: date) {
+                    returnVal = foundObjects.first?.url
                 }
             } catch let error {
                 // TODO: If this was a real project we would do something meaningful with this error
