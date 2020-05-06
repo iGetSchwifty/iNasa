@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:iOS-Kata.xcodeproj">
+      location = "self:/Users/tacenda/Desktop/iNasa/iNasa.xcodeproj">
    </FileRef>
 </Workspace>

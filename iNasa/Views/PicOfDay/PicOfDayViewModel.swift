@@ -30,6 +30,13 @@ class PicOfDayViewModel: ObservableObject {
             }.store(in: &self.disposeBag)
     }
     
+    func textFrom(date: Date?) -> String {
+        if let date = date {
+            return DateFormatter.picOfDayFormatter.string(from: date)
+        }
+        return ""
+    }
+    
     private func imageFrom(url: String?) {
         PicOfDayService.imageFrom(url: url)
             .receive(on: DispatchQueue.main)

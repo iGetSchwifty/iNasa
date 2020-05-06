@@ -18,10 +18,11 @@
 		CF32F4912461D93E00FEF227 /* iOS_KataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4902461D93E00FEF227 /* iOS_KataUITests.swift */; };
 		CF32F4A02461EA3E00FEF227 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F49F2461EA3E00FEF227 /* PersistentContainer.swift */; };
 		CF32F4A52461EE3100FEF227 /* NearEarthObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A42461EE3100FEF227 /* NearEarthObjects.swift */; };
-		CF32F4A72461EE5100FEF227 /* PicOfDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A62461EE5100FEF227 /* PicOfDayView.swift */; };
+		CF32F4A72461EE5100FEF227 /* PicOfTheDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A62461EE5100FEF227 /* PicOfTheDayView.swift */; };
 		CF32F4A92461EEAF00FEF227 /* PicOfDayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F4A82461EEAF00FEF227 /* PicOfDayService.swift */; };
 		CF367B0B2461F3B100E86EE1 /* PicOfDayAPIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF367B0A2461F3B100E86EE1 /* PicOfDayAPIEntity.swift */; };
 		CF367B0D2461FE8100E86EE1 /* PicOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */; };
+		CF42A5112462449100B39F99 /* DateFormatter+iNasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42A5102462449100B39F99 /* DateFormatter+iNasa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CF32F4682461D93D00FEF227 /* iOS-Kata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Kata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF32F4682461D93D00FEF227 /* iNasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF32F46B2461D93D00FEF227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF32F46D2461D93D00FEF227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF32F4702461D93D00FEF227 /* iOS_Kata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_Kata.xcdatamodel; sourceTree = "<group>"; };
@@ -51,18 +52,19 @@
 		CF32F4772461D93D00FEF227 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF32F47A2461D93D00FEF227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF32F47C2461D93D00FEF227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF32F4812461D93E00FEF227 /* iOS-KataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-KataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF32F4812461D93E00FEF227 /* iNasaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iNasaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF32F4852461D93E00FEF227 /* iOS_KataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_KataTests.swift; sourceTree = "<group>"; };
 		CF32F4872461D93E00FEF227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF32F48C2461D93E00FEF227 /* iOS-KataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-KataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF32F48C2461D93E00FEF227 /* iNasaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iNasaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF32F4902461D93E00FEF227 /* iOS_KataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_KataUITests.swift; sourceTree = "<group>"; };
 		CF32F4922461D93E00FEF227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF32F49F2461EA3E00FEF227 /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		CF32F4A42461EE3100FEF227 /* NearEarthObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjects.swift; sourceTree = "<group>"; };
-		CF32F4A62461EE5100FEF227 /* PicOfDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayView.swift; sourceTree = "<group>"; };
+		CF32F4A62461EE5100FEF227 /* PicOfTheDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDayView.swift; sourceTree = "<group>"; };
 		CF32F4A82461EEAF00FEF227 /* PicOfDayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayService.swift; sourceTree = "<group>"; };
 		CF367B0A2461F3B100E86EE1 /* PicOfDayAPIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayAPIEntity.swift; sourceTree = "<group>"; };
 		CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayViewModel.swift; sourceTree = "<group>"; };
+		CF42A5102462449100B39F99 /* DateFormatter+iNasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+iNasa.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +95,9 @@
 		CF32F45F2461D93D00FEF227 = {
 			isa = PBXGroup;
 			children = (
-				CF32F46A2461D93D00FEF227 /* iOS-Kata */,
-				CF32F4842461D93E00FEF227 /* iOS-KataTests */,
-				CF32F48F2461D93E00FEF227 /* iOS-KataUITests */,
+				CF32F46A2461D93D00FEF227 /* iNasa */,
+				CF32F4842461D93E00FEF227 /* iNasaTests */,
+				CF32F48F2461D93E00FEF227 /* INasaUITests */,
 				CF32F4692461D93D00FEF227 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,16 +105,17 @@
 		CF32F4692461D93D00FEF227 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF32F4682461D93D00FEF227 /* iOS-Kata.app */,
-				CF32F4812461D93E00FEF227 /* iOS-KataTests.xctest */,
-				CF32F48C2461D93E00FEF227 /* iOS-KataUITests.xctest */,
+				CF32F4682461D93D00FEF227 /* iNasa.app */,
+				CF32F4812461D93E00FEF227 /* iNasaTests.xctest */,
+				CF32F48C2461D93E00FEF227 /* iNasaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF32F46A2461D93D00FEF227 /* iOS-Kata */ = {
+		CF32F46A2461D93D00FEF227 /* iNasa */ = {
 			isa = PBXGroup;
 			children = (
+				CF42A50F2462447F00B39F99 /* extensions */,
 				CF32F4A12461EB2F00FEF227 /* Views */,
 				CF32F49E2461EA1500FEF227 /* CoreData */,
 				CF32F46B2461D93D00FEF227 /* AppDelegate.swift */,
@@ -122,7 +125,7 @@
 				CF32F47C2461D93D00FEF227 /* Info.plist */,
 				CF32F4762461D93D00FEF227 /* Preview Content */,
 			);
-			path = "iOS-Kata";
+			path = iNasa;
 			sourceTree = "<group>";
 		};
 		CF32F4762461D93D00FEF227 /* Preview Content */ = {
@@ -133,22 +136,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CF32F4842461D93E00FEF227 /* iOS-KataTests */ = {
+		CF32F4842461D93E00FEF227 /* iNasaTests */ = {
 			isa = PBXGroup;
 			children = (
 				CF32F4852461D93E00FEF227 /* iOS_KataTests.swift */,
 				CF32F4872461D93E00FEF227 /* Info.plist */,
 			);
-			path = "iOS-KataTests";
+			path = iNasaTests;
 			sourceTree = "<group>";
 		};
-		CF32F48F2461D93E00FEF227 /* iOS-KataUITests */ = {
+		CF32F48F2461D93E00FEF227 /* INasaUITests */ = {
 			isa = PBXGroup;
 			children = (
 				CF32F4902461D93E00FEF227 /* iOS_KataUITests.swift */,
 				CF32F4922461D93E00FEF227 /* Info.plist */,
 			);
-			path = "iOS-KataUITests";
+			path = INasaUITests;
 			sourceTree = "<group>";
 		};
 		CF32F49E2461EA1500FEF227 /* CoreData */ = {
@@ -173,7 +176,7 @@
 		CF32F4A22461EE1E00FEF227 /* PicOfDay */ = {
 			isa = PBXGroup;
 			children = (
-				CF32F4A62461EE5100FEF227 /* PicOfDayView.swift */,
+				CF32F4A62461EE5100FEF227 /* PicOfTheDayView.swift */,
 				CF32F4A82461EEAF00FEF227 /* PicOfDayService.swift */,
 				CF367B0A2461F3B100E86EE1 /* PicOfDayAPIEntity.swift */,
 				CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */,
@@ -189,12 +192,20 @@
 			path = NearEarthObjects;
 			sourceTree = "<group>";
 		};
+		CF42A50F2462447F00B39F99 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF42A5102462449100B39F99 /* DateFormatter+iNasa.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF32F4672461D93D00FEF227 /* iOS-Kata */ = {
+		CF32F4672461D93D00FEF227 /* iNasa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF32F4952461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-Kata" */;
+			buildConfigurationList = CF32F4952461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iNasa" */;
 			buildPhases = (
 				CF32F4642461D93D00FEF227 /* Sources */,
 				CF32F4652461D93D00FEF227 /* Frameworks */,
@@ -204,14 +215,14 @@
 			);
 			dependencies = (
 			);
-			name = "iOS-Kata";
+			name = iNasa;
 			productName = "iOS-Kata";
-			productReference = CF32F4682461D93D00FEF227 /* iOS-Kata.app */;
+			productReference = CF32F4682461D93D00FEF227 /* iNasa.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CF32F4802461D93E00FEF227 /* iOS-KataTests */ = {
+		CF32F4802461D93E00FEF227 /* iNasaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF32F4982461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-KataTests" */;
+			buildConfigurationList = CF32F4982461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iNasaTests" */;
 			buildPhases = (
 				CF32F47D2461D93E00FEF227 /* Sources */,
 				CF32F47E2461D93E00FEF227 /* Frameworks */,
@@ -222,14 +233,14 @@
 			dependencies = (
 				CF32F4832461D93E00FEF227 /* PBXTargetDependency */,
 			);
-			name = "iOS-KataTests";
+			name = iNasaTests;
 			productName = "iOS-KataTests";
-			productReference = CF32F4812461D93E00FEF227 /* iOS-KataTests.xctest */;
+			productReference = CF32F4812461D93E00FEF227 /* iNasaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CF32F48B2461D93E00FEF227 /* iOS-KataUITests */ = {
+		CF32F48B2461D93E00FEF227 /* iNasaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF32F49B2461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-KataUITests" */;
+			buildConfigurationList = CF32F49B2461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iNasaUITests" */;
 			buildPhases = (
 				CF32F4882461D93E00FEF227 /* Sources */,
 				CF32F4892461D93E00FEF227 /* Frameworks */,
@@ -240,9 +251,9 @@
 			dependencies = (
 				CF32F48E2461D93E00FEF227 /* PBXTargetDependency */,
 			);
-			name = "iOS-KataUITests";
+			name = iNasaUITests;
 			productName = "iOS-KataUITests";
-			productReference = CF32F48C2461D93E00FEF227 /* iOS-KataUITests.xctest */;
+			productReference = CF32F48C2461D93E00FEF227 /* iNasaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -268,7 +279,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF32F4632461D93D00FEF227 /* Build configuration list for PBXProject "iOS-Kata" */;
+			buildConfigurationList = CF32F4632461D93D00FEF227 /* Build configuration list for PBXProject "iNasa" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -281,9 +292,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF32F4672461D93D00FEF227 /* iOS-Kata */,
-				CF32F4802461D93E00FEF227 /* iOS-KataTests */,
-				CF32F48B2461D93E00FEF227 /* iOS-KataUITests */,
+				CF32F4672461D93D00FEF227 /* iNasa */,
+				CF32F4802461D93E00FEF227 /* iNasaTests */,
+				CF32F48B2461D93E00FEF227 /* iNasaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -323,11 +334,12 @@
 				CF32F4A92461EEAF00FEF227 /* PicOfDayService.swift in Sources */,
 				CF32F46C2461D93D00FEF227 /* AppDelegate.swift in Sources */,
 				CF32F46E2461D93D00FEF227 /* SceneDelegate.swift in Sources */,
+				CF42A5112462449100B39F99 /* DateFormatter+iNasa.swift in Sources */,
 				CF32F4A02461EA3E00FEF227 /* PersistentContainer.swift in Sources */,
 				CF32F4A52461EE3100FEF227 /* NearEarthObjects.swift in Sources */,
 				CF367B0D2461FE8100E86EE1 /* PicOfDayViewModel.swift in Sources */,
 				CF32F4732461D93D00FEF227 /* AppView.swift in Sources */,
-				CF32F4A72461EE5100FEF227 /* PicOfDayView.swift in Sources */,
+				CF32F4A72461EE5100FEF227 /* PicOfTheDayView.swift in Sources */,
 				CF367B0B2461F3B100E86EE1 /* PicOfDayAPIEntity.swift in Sources */,
 				CF32F4712461D93D00FEF227 /* iOS_Kata.xcdatamodeld in Sources */,
 			);
@@ -354,12 +366,12 @@
 /* Begin PBXTargetDependency section */
 		CF32F4832461D93E00FEF227 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CF32F4672461D93D00FEF227 /* iOS-Kata */;
+			target = CF32F4672461D93D00FEF227 /* iNasa */;
 			targetProxy = CF32F4822461D93E00FEF227 /* PBXContainerItemProxy */;
 		};
 		CF32F48E2461D93E00FEF227 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CF32F4672461D93D00FEF227 /* iOS-Kata */;
+			target = CF32F4672461D93D00FEF227 /* iNasa */;
 			targetProxy = CF32F48D2461D93E00FEF227 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -495,16 +507,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"iOS-Kata/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iNasa/Preview Content\"";
 				DEVELOPMENT_TEAM = KLMZS2FKJ3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "iOS-Kata/Info.plist";
+				INFOPLIST_FILE = iNasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tacenda.iOS-Kata";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tacenda.iNasa;
+				PRODUCT_NAME = iNasa;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -515,16 +527,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"iOS-Kata/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iNasa/Preview Content\"";
 				DEVELOPMENT_TEAM = KLMZS2FKJ3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "iOS-Kata/Info.plist";
+				INFOPLIST_FILE = iNasa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tacenda.iOS-Kata";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tacenda.iNasa;
+				PRODUCT_NAME = iNasa;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -548,7 +560,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Kata.app/iOS-Kata";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iNasa.app/iNasa";
 			};
 			name = Debug;
 		};
@@ -570,7 +582,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Kata.app/iOS-Kata";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iNasa.app/iNasa";
 			};
 			name = Release;
 		};
@@ -617,7 +629,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF32F4632461D93D00FEF227 /* Build configuration list for PBXProject "iOS-Kata" */ = {
+		CF32F4632461D93D00FEF227 /* Build configuration list for PBXProject "iNasa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF32F4932461D93E00FEF227 /* Debug */,
@@ -626,7 +638,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF32F4952461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-Kata" */ = {
+		CF32F4952461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iNasa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF32F4962461D93E00FEF227 /* Debug */,
@@ -635,7 +647,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF32F4982461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-KataTests" */ = {
+		CF32F4982461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iNasaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF32F4992461D93E00FEF227 /* Debug */,
@@ -644,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF32F49B2461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iOS-KataUITests" */ = {
+		CF32F49B2461D93E00FEF227 /* Build configuration list for PBXNativeTarget "iNasaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF32F49C2461D93E00FEF227 /* Debug */,

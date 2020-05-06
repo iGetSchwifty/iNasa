@@ -11,8 +11,10 @@ import SwiftUI
 struct TabBarView: View {
     var body: some View {
         TabView {
-            PicOfDayView()
-            .tabItem {
+            
+            NavigationView {
+                PicOfTheDayView()
+            }.tabItem {
                 Image(systemName: "photo.fill")
                 Text("APOD")
             }.tag(1)
@@ -20,7 +22,7 @@ struct TabBarView: View {
             NearEarthObjects()
             .tabItem {
                 Image(systemName: "circle")
-                Text("APOD")
+                Text("Near Earth Objects")
             }.tag(2)
         }
     }

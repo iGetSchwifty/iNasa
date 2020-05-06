@@ -14,14 +14,12 @@ import UIKit
 class PicOfDayService {
     static var isFetching = false
     static func fetch() -> AnyPublisher<String, Never> {
-        let formatter = DateFormatter()
-        formatter.timeStyle = .none
-        formatter.dateFormat = "yyyy-mm-dd"
-        guard checkForCache(date: Date()) == false else {
-            return Just("").eraseToAnyPublisher() // TODO:
+        let url = checkForCache(date: Date())
+        guard url == nil else {
+            return Just(url ?? "").eraseToAnyPublisher()
         }
         
-        guard isFetching == false else { return Just("").eraseToAnyPublisher() } // TODO:
+        guard isFetching == false else { return Just(url ?? "").eraseToAnyPublisher() }
         
         isFetching = true
         
@@ -30,15 +28,15 @@ class PicOfDayService {
             .dataTaskPublisher(for: request)
             .map({ (data, response) -> String in
                 if let picOfDay = try? JSONDecoder().decode(PicOfDayAPIEntity.self, from: data) {
+                    let cachedURL = checkForCache(date: DateFormatter.picOfDayFormatter.date(from: picOfDay.date))
+                    guard cachedURL == nil else { return cachedURL ?? "" }
                     
-                    guard checkForCache(date: formatter.date(from: picOfDay.date)) == false else { return "" }
-                    
-                    let context = PersistentContainer.persistentContainer.viewContext
+                    let context = PersistentContainer.persistentContainer.newBackgroundContext()
    
                     context.performAndWait {
                         let newPic = PictureOfTheDay(context: context)
                         newPic.copyright = picOfDay.copyright
-                        newPic.date = formatter.date(from: picOfDay.date) ?? Date()
+                        newPic.date = DateFormatter.picOfDayFormatter.date(from: picOfDay.date) ?? Date()
                         newPic.explanation = picOfDay.explanation
                         newPic.title = picOfDay.title
                         newPic.url = picOfDay.url
@@ -73,11 +71,11 @@ class PicOfDayService {
             .eraseToAnyPublisher()
     }
     
-    private static func checkForCache(date: Date?) -> Bool {
-        guard let date = date else { return false }
+    private static func checkForCache(date: Date?) -> String? {
+        guard let date = date else { return nil }
         
-        let context = PersistentContainer.persistentContainer.viewContext
-        var returnVal = false
+        let context = PersistentContainer.persistentContainer.newBackgroundContext()
+        var returnVal: String?
         context.performAndWait {
             let fetchReq: NSFetchRequest<PictureOfTheDay> = PictureOfTheDay.fetchRequest()
             fetchReq.sortDescriptors = [NSSortDescriptor(key: #keyPath(PictureOfTheDay.date), ascending: false)]
@@ -86,7 +84,7 @@ class PicOfDayService {
                 let foundObjects = try context.fetch(fetchReq)
                 for object in foundObjects {
                     if let oldDate = object.date, oldDate <= date {
-                        returnVal = true
+                        returnVal = object.url
                         break
                     }
                 }
