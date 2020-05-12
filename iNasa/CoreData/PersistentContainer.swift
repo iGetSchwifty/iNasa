@@ -36,8 +36,8 @@ class PersistentContainer {
 
     static func newBackgroundContext() -> NSManagedObjectContext {
         let context = persistentContainer.newBackgroundContext()
-        //context.automaticallyMergesChangesFromParent = true
-        //context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        context.automaticallyMergesChangesFromParent = true
+        context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         return context
     }
 }
