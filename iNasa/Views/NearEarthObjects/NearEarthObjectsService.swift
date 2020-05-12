@@ -56,16 +56,6 @@ class NearEarthObjectsService {
             .eraseToAnyPublisher()
     }
     
-    static func imageFrom(url: String?) -> AnyPublisher<UIImage, Never> {
-        guard let url = url, let realURL = URL(string: url) else { return Just(UIImage()).eraseToAnyPublisher() }
-        
-        return URLSession.shared.dataTaskPublisher(for: realURL)
-            .map { UIImage(data: $0.data)}
-            .replaceError(with: nil)
-            .replaceNil(with: UIImage())
-            .eraseToAnyPublisher()
-    }
-    
     private static func save(strDate: String, entities: [NEOAPIEntity]) {
         let context = PersistentContainer.newBackgroundContext()
         context.performAndWait {
