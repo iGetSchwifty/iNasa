@@ -27,27 +27,21 @@ struct NearEarthObjectsView: View {
                     VStack(alignment: .leading) {
                         Text("Name: \(neo.name ?? "")")
                         
-                        if neo.is_potentially_hazardous {
-                            HStack {
-                                Text("Potentially Hazardous: ")
-                                    .font(.system(.body))
+                        HStack {
+                            Text("Potentially Hazardous: ")
+                                .font(.system(.body))
                                 
+                            if neo.is_potentially_hazardous {
                                 Text("YES")
                                     .font(.system(.body))
                                     .foregroundColor(.red)
-                            }
-                            .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 5))
-                        } else {
-                            HStack {
-                                Text("Potentially Hazardous: ")
-                                    .font(.system(.body))
-                                
+                            } else {
                                 Text("NO")
                                     .font(.system(.body))
                                     .foregroundColor(.green)
                             }
-                            .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 5))
                         }
+                        .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 5))
                         
                         VStack(alignment: .leading) {
                             Text("Estimated Diameter")
