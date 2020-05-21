@@ -12,13 +12,15 @@ import Combine
 
 class NearEarthObjectsViewModel {
     var disposeBag = Set<AnyCancellable>()
+    private var provider: NetworkingProtocol
     
-    init() {
+    init(provider: NetworkingProtocol = NetworkingPublisher()) {
+        self.provider = provider
         fetch()
     }
     
     func fetch() {
-        NearEarthObjectsService.fetch(date: Date())
+        NearEarthObjectsService.fetch(date: Date(), provider: provider)
             .receive(on: DispatchQueue.main)
             .sink { _ in }.store(in: &self.disposeBag)
     }

@@ -13,7 +13,7 @@ import UIKit
 
 class PicOfDayService {
     static var isFetching = false
-    static func fetch() -> AnyPublisher<String, Never> {
+    static func fetch(provider: NetworkingProtocol) -> AnyPublisher<String, Never> {
         let url = checkForCache(date: Date())
         guard url == nil else {
             return Just(url ?? "").eraseToAnyPublisher()
@@ -23,10 +23,9 @@ class PicOfDayService {
         
         isFetching = true
         
-        let request = URLRequest(url: URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")!)
-        return URLSession.shared
-            .dataTaskPublisher(for: request)
-            .map({ (data, response) -> String in
+        return provider
+            .dataTaskPublisher(for: URLService.picOfDay)
+            .map({ data -> String in
                 do {
                     let picOfDay = try JSONDecoder().decode(PicOfDayAPIEntity.self, from: data)
                     saveObject(picOfDay: picOfDay)
@@ -47,11 +46,11 @@ class PicOfDayService {
             .eraseToAnyPublisher()
     }
     
-    static func imageFrom(url: String?) -> AnyPublisher<UIImage, Never> {
+    static func imageFrom(url: String?, provider: NetworkingProtocol) -> AnyPublisher<UIImage, Never> {
         guard let url = url, let realURL = URL(string: url) else { return Just(UIImage()).eraseToAnyPublisher() }
         
-        return URLSession.shared.dataTaskPublisher(for: realURL)
-            .map { UIImage(data: $0.data)}
+        return provider.dataTaskPublisher(for: realURL)
+            .map { UIImage(data: $0)}
             .replaceError(with: nil)
             .replaceNil(with: UIImage())
             .eraseToAnyPublisher()

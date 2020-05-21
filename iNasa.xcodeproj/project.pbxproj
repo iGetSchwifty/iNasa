@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF2CAB832476E0C600FCFC50 /* URLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2CAB822476E0C600FCFC50 /* URLService.swift */; };
 		CF32F46C2461D93D00FEF227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F46B2461D93D00FEF227 /* AppDelegate.swift */; };
 		CF32F46E2461D93D00FEF227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32F46D2461D93D00FEF227 /* SceneDelegate.swift */; };
 		CF32F4712461D93D00FEF227 /* iOS_Kata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF32F46F2461D93D00FEF227 /* iOS_Kata.xcdatamodeld */; };
@@ -24,6 +25,8 @@
 		CF367B0D2461FE8100E86EE1 /* PicOfDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */; };
 		CF42A5112462449100B39F99 /* DateFormatter+iNasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42A5102462449100B39F99 /* DateFormatter+iNasa.swift */; };
 		CF42A51324624C7200B39F99 /* PicOfTheDayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42A51224624C7200B39F99 /* PicOfTheDayDetailView.swift */; };
+		CF7D69D12476BFEB004A83EB /* NetworkingPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D69CF2476BFEB004A83EB /* NetworkingPublisher.swift */; };
+		CF7D69D22476BFEB004A83EB /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D69D02476BFEB004A83EB /* NetworkingProtocol.swift */; };
 		CF8505DF24625DCB009BB298 /* NearEarthObjectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8505DE24625DCB009BB298 /* NearEarthObjectsService.swift */; };
 		CF8505E12462627D009BB298 /* NEOAPIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8505E02462627D009BB298 /* NEOAPIEntity.swift */; };
 		CF8505E324626518009BB298 /* NearEarthObjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8505E224626518009BB298 /* NearEarthObjectsViewModel.swift */; };
@@ -47,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF2CAB822476E0C600FCFC50 /* URLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLService.swift; sourceTree = "<group>"; };
 		CF32F4682461D93D00FEF227 /* iNasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF32F46B2461D93D00FEF227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF32F46D2461D93D00FEF227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfDayViewModel.swift; sourceTree = "<group>"; };
 		CF42A5102462449100B39F99 /* DateFormatter+iNasa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+iNasa.swift"; sourceTree = "<group>"; };
 		CF42A51224624C7200B39F99 /* PicOfTheDayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicOfTheDayDetailView.swift; sourceTree = "<group>"; };
+		CF7D69CF2476BFEB004A83EB /* NetworkingPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingPublisher.swift; sourceTree = "<group>"; };
+		CF7D69D02476BFEB004A83EB /* NetworkingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
 		CF8505DE24625DCB009BB298 /* NearEarthObjectsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjectsService.swift; sourceTree = "<group>"; };
 		CF8505E02462627D009BB298 /* NEOAPIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEOAPIEntity.swift; sourceTree = "<group>"; };
 		CF8505E224626518009BB298 /* NearEarthObjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjectsViewModel.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 		CF32F46A2461D93D00FEF227 /* iNasa */ = {
 			isa = PBXGroup;
 			children = (
+				CF7D69CE2476BFEB004A83EB /* networking */,
 				CF42A50F2462447F00B39F99 /* extensions */,
 				CF32F4A12461EB2F00FEF227 /* Views */,
 				CF32F49E2461EA1500FEF227 /* CoreData */,
@@ -185,9 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				CF32F4A62461EE5100FEF227 /* PicOfTheDayView.swift */,
+				CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */,
 				CF32F4A82461EEAF00FEF227 /* PicOfDayService.swift */,
 				CF367B0A2461F3B100E86EE1 /* PicOfDayAPIEntity.swift */,
-				CF367B0C2461FE8100E86EE1 /* PicOfDayViewModel.swift */,
 				CF42A51224624C7200B39F99 /* PicOfTheDayDetailView.swift */,
 			);
 			path = PicOfDay;
@@ -197,9 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				CF32F4A42461EE3100FEF227 /* NearEarthObjectsView.swift */,
+				CF8505E224626518009BB298 /* NearEarthObjectsViewModel.swift */,
 				CF8505DE24625DCB009BB298 /* NearEarthObjectsService.swift */,
 				CF8505E02462627D009BB298 /* NEOAPIEntity.swift */,
-				CF8505E224626518009BB298 /* NearEarthObjectsViewModel.swift */,
 			);
 			path = NearEarthObjects;
 			sourceTree = "<group>";
@@ -210,6 +217,16 @@
 				CF42A5102462449100B39F99 /* DateFormatter+iNasa.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		CF7D69CE2476BFEB004A83EB /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				CF7D69CF2476BFEB004A83EB /* NetworkingPublisher.swift */,
+				CF7D69D02476BFEB004A83EB /* NetworkingProtocol.swift */,
+				CF2CAB822476E0C600FCFC50 /* URLService.swift */,
+			);
+			path = networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF8505E12462627D009BB298 /* NEOAPIEntity.swift in Sources */,
+				CF7D69D22476BFEB004A83EB /* NetworkingProtocol.swift in Sources */,
 				CF42A51324624C7200B39F99 /* PicOfTheDayDetailView.swift in Sources */,
 				CF32F4A92461EEAF00FEF227 /* PicOfDayService.swift in Sources */,
 				CF32F46C2461D93D00FEF227 /* AppDelegate.swift in Sources */,
@@ -353,7 +371,9 @@
 				CF32F4A52461EE3100FEF227 /* NearEarthObjectsView.swift in Sources */,
 				CF367B0D2461FE8100E86EE1 /* PicOfDayViewModel.swift in Sources */,
 				CF32F4732461D93D00FEF227 /* AppView.swift in Sources */,
+				CF7D69D12476BFEB004A83EB /* NetworkingPublisher.swift in Sources */,
 				CF32F4A72461EE5100FEF227 /* PicOfTheDayView.swift in Sources */,
+				CF2CAB832476E0C600FCFC50 /* URLService.swift in Sources */,
 				CF367B0B2461F3B100E86EE1 /* PicOfDayAPIEntity.swift in Sources */,
 				CF8505E324626518009BB298 /* NearEarthObjectsViewModel.swift in Sources */,
 				CF8505DF24625DCB009BB298 /* NearEarthObjectsService.swift in Sources */,

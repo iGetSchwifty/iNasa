@@ -13,7 +13,7 @@ import UIKit
 
 class NearEarthObjectsService {
     static var isFetching = false
-    static func fetch(date: Date?) -> AnyPublisher<Bool, Never> {
+    static func fetch(date: Date?, provider: NetworkingProtocol) -> AnyPublisher<Bool, Never> {
         let date = date ?? Date()
         guard checkForCache(date: date) == false else { return Just(true).eraseToAnyPublisher() }
 
@@ -21,10 +21,9 @@ class NearEarthObjectsService {
         
         isFetching = true
         let strDate = DateFormatter.string(from: date)
-        let request = URLRequest(url: URL(string: "https://api.nasa.gov/neo/rest/v1/feed?start_date=\(strDate)&end_date=\(strDate)&api_key=DEMO_KEY")!)
-        return URLSession.shared
-            .dataTaskPublisher(for: request)
-            .map({ (data, response) -> [NEOAPIEntity] in
+        return provider
+            .dataTaskPublisher(for: URLService.nearEarthObjects(forDate: strDate))
+            .map({ data -> [NEOAPIEntity] in
                 var returnObjects = [NEOAPIEntity]()
                 // Need to parse as dict due to the fact that the api returns the date as a key value.
                 let neoData = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as AnyObject

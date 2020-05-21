@@ -15,12 +15,15 @@ class PicOfDayViewModel: ObservableObject {
     
     @Published var picImage = UIImage()
     
-    init() {
+    private var provider: NetworkingProtocol
+    
+    init(provider: NetworkingProtocol = NetworkingPublisher()) {
+        self.provider = provider
         fetch()
     }
     
     func fetch() {
-        PicOfDayService.fetch()
+        PicOfDayService.fetch(provider: provider)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] url in
                 guard let self = self else { return }
@@ -38,7 +41,7 @@ class PicOfDayViewModel: ObservableObject {
     }
     
     private func imageFrom(url: String?) {
-        PicOfDayService.imageFrom(url: url)
+        PicOfDayService.imageFrom(url: url, provider: provider)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] image in
                 guard let self = self else { return }
