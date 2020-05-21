@@ -8,4 +8,4 @@ There are no third party frameworks as this uses SwiftUI and Combine, along with
 
 TODO: Update readme.. Demo gif coming soon. Add tests and minor clean up code.
 
-![](demo.mov)
+![](demo.gif)
