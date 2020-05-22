@@ -11,9 +11,16 @@ import SwiftUI
 struct PicOfTheDayDetailView: View {
     var image: UIImage
     var body: some View {
-        Image(uiImage: image)
-            .resizable()
-            .scaledToFit()
-            .navigationBarBackButtonHidden(false)
+        ZStack {
+            GeometryReader { geometry in
+                Rectangle()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+            }.foregroundColor(.black)
+            
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+                .navigationBarBackButtonHidden(false)
+        }
     }
 }
