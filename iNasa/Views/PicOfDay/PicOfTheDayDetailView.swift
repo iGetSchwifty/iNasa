@@ -13,6 +13,7 @@ struct PicOfTheDayDetailView: View {
     var body: some View {
         Image(uiImage: image)
             .resizable()
+            .scaledToFit()
             .navigationBarBackButtonHidden(false)
     }
 }
